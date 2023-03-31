@@ -6,7 +6,10 @@ class Animal:
 
     def get_name(self):
         return self._name
-    name = property(get_name)
+    def set_name(self, name):
+        if type(name) == str:
+            self._name = name
+    name = property(get_name, set_name)
 
     def get_type(self):
         return self._type
