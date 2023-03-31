@@ -13,7 +13,10 @@ class Animal:
 
     def get_type(self):
         return self._type
-    type = property(get_type)
+    def set_type(self, animal_type):
+        if type(type) == str:
+            self._type = animal_type
+    type = property(get_type, set_type)
 
     def get_owners(self):
         unique_owners = set()
